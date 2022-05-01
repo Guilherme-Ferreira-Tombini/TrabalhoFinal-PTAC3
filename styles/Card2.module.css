@@ -1,0 +1,71 @@
+.loginbox{
+  padding:20px;
+  width:45%;
+ background-color: #2e0250;
+  border: 3px solid white;
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px black;
+  border-radius: 10px;
+}
+.loginbox h2{
+  margin: 0 0 30px;
+  padding: 0;
+  color: white;
+  text-align: center;
+}
+
+.loginbox .userbox{
+  position:relative;
+}
+
+.loginbox .userbox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+  
+}
+.loginbox .userbox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+  transition: .5s;
+}
+.loginbox .userbox input:focus ~ label,
+.loginbox .userbox input:valid ~ label{
+  top: -20px;
+  left:0;
+  color: white;
+  font-size: 12px;
+}
+.loginbox form button{
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  letter-spacing: 4px;
+  background: #7c509b;
+}
+.loginbox button:hover{
+  background: #3c3243;
+  color: white;
+  
+  box-shadow: 0 0 10px white,
+              0 0 10px white,
+              0 0 10px white,
+              0 0 10px white;           
+}

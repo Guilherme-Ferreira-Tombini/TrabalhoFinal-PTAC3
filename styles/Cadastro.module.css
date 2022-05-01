@@ -1,0 +1,24 @@
+.tudo{
+  margin-bottom:40px;
+  padding:10px;
+}
+.card{
+  padding:20px;
+  background-color:#421c5e;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-size: 14px;
+}
+.botao1{
+  font-size: 16px;
+  border: 1px solid white;
+  padding:7px;
+  background-color: #008a17;
+}
+.botoes{
+ padding:10px;
+}
+.texto{
+  padding:10px;
+}
+

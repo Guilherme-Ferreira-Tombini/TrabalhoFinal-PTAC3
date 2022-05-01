@@ -1,0 +1,32 @@
+.card{
+  padding:20px;
+  background-color:#2e0250;
+  border: 3px solid white;
+  border-radius: 10px;
+  font-size: 14px;
+  display:flex;
+  
+}
+.botao1{
+  font-size: 16px;
+  border: 1px solid white;
+  padding:7px;
+  color:white;
+  background-color: red;
+}
+.botao2{
+  font-size: 16px;
+  margin:10px;
+  border: 1px solid white;
+  padding:7px;
+  background-color: blue;
+}
+.botoes{
+  margin-left: 60px;
+  
+}
+
+.texto{
+  flex:1;
+}
+

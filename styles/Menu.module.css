@@ -1,0 +1,21 @@
+
+.header{
+  width:100%;
+  background-color: #19012B;
+  color:white;
+  border-bottom: 1px solid white; 
+}
+.menu{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.titulo{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:28px; 
+}
+.logo{
+  margin:10px;
+}
