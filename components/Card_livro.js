@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import styles from '../styles/MenuPequeno.module.css'
+import axios from 'axios'
+import { useRouter } from "next/router";
 
 export default function Card_livro(props) {
   function adicionaZero(numero){
@@ -10,6 +12,20 @@ export default function Card_livro(props) {
 }
 let data = new Date(props.data_publicacao);
 let dataFormatada = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
+
+let router = useRouter();    
+async function deleta(){
+  let alerta = confirm("Você deseja deletar esse livro ?");
+  if(alerta == true){
+    const response = await axios.delete("https://skeleton-nodejs.guilhermetombin.repl.co/deletar1?id=" + parseInt(props.id))
+     console.log(response);
+    alert("Livro excluido com sucesso")   
+        router.push('/')
+  }else{
+    alert("O livro não foi deletado")
+  }
+}
+  
   return (
     <>
       <div className={styles.card}>
@@ -21,7 +37,7 @@ let dataFormatada = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZe
           </div>
         <div className={styles.botoes} >
           
-         <button className={styles.botao1}>
+         <button className={styles.botao1} onClick={deleta}>
             Deletar
       </button>
         </div>

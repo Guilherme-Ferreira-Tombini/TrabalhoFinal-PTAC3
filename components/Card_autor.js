@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import styles from '../styles/MenuPequeno.module.css'
+import axios from 'axios'
+import { toast, ToastContainer } from 'react-toastify';
+import { useRouter } from "next/router";
 
 export default function Card_autor(props) {
 function adicionaZero(numero){
@@ -14,6 +17,19 @@ let dataFormatada = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZe
 const apagarAutor = async (IdAutor) => {
   console.log(IdAutor);
 }
+let router = useRouter();
+async function deleta(){
+  let alerta = confirm("Você deseja deletar esse autor ?");
+  if(alerta == true){
+    const response = await axios.delete("https://skeleton-nodejs.guilhermetombin.repl.co/deletar?id=" + parseInt(props.id))
+     console.log(response);
+    alert("Autor excluido com sucesso") 
+        router.push('/')
+  }else{
+    alert("O autor não foi deletado")
+  }
+}
+  
   return (
     <>
       <div className={styles.card}>
@@ -23,7 +39,7 @@ const apagarAutor = async (IdAutor) => {
           </div>
         <div className={styles.botoes}>
           
-          <button className={styles.botao1}>
+          <button className={styles.botao1} onClick={deleta}>
             Deletar
       </button>
         </div>

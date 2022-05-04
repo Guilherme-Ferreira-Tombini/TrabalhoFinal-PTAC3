@@ -23,7 +23,7 @@ const [autores, setAutores]= useState([])
          return(
          <div className={styles.cards} key={autor.id}>
           <div className={styles.espaco}>
-           <Card nome={autor.nome} sobrenome={autor.sobrenome} data_de_nascimento={autor.data_de_nascimento}/>
+           <Card id={autor.id} nome={autor.nome} sobrenome={autor.sobrenome} data_de_nascimento={autor.data_de_nascimento}/>
          </div> 
          </div>
          )
