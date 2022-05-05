@@ -29,6 +29,10 @@ async function deleta(){
     alert("O autor não foi deletado")
   }
 }
+  function altera(){
+            router.push('/posts/' + props.id)
+
+  }
   
   return (
     <>
@@ -42,7 +46,7 @@ async function deleta(){
           <button className={styles.botao1} onClick={deleta}>
             Deletar
       </button>
-         <Link href="/posts/Atualiza_autor"><a className={styles.botao2}>Alterar</a></Link>
+<button onClick={altera}>Alterar</button>        
         </div>
       </div>
     </>

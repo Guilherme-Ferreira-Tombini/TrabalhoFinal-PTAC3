@@ -25,7 +25,9 @@ async function deleta(){
     alert("O livro não foi deletado")
   }
 }
-  
+function altera(){
+            router.push('/posts/livros/' + props.id)
+  }
   return (
     <>
       <div className={styles.card}>
@@ -40,6 +42,7 @@ async function deleta(){
          <button className={styles.botao1} onClick={deleta}>
             Deletar
       </button>
+          <button onClick={altera}>Alterar</button> 
         </div>
       </div>
     </>

@@ -7,7 +7,7 @@ import Card from '/components/Card_livro.js'
 export default function Cards2(){
   const [livros, setLivros]= useState([])
   useEffect(()=>{
-    api.get('/livros-mostrar')
+    api.get('/livrosmostrar')
       .then(response=>{
         setLivros(response.data)
       })
