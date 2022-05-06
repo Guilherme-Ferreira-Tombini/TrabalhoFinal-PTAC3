@@ -8,7 +8,7 @@ import axios from 'axios'
 
 export async function getServerSideProps(context) {
   const id = context.query.id
-  const response = await axios.get("https://skeleton-nodejs.guilhermetombin.repl.co/" + id)
+  const response = await axios.get("https://skeleton-nodejs.guilhermetombin.repl.co/autor/" + id)
   const autor = response.data
   const data = autor[0]
  return{

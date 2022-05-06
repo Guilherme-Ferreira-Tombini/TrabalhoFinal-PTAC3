@@ -70,7 +70,7 @@ const handleInputChange = (e) => {
             <label>Data de nascimento</label>
           </div>
           <center>
-            <button type="submit">CADASTRAR</button>
+            <button type="submit">Alterar</button>
           </center>
         </form>
       </div>

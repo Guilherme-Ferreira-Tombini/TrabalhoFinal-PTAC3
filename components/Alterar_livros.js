@@ -78,7 +78,7 @@ const handleSubmit = async (e) => {
     <label>Preço</label>
     </div>
       <center>
-      <button type="submit">CADASTRAR</button>
+      <button type="submit">Alterar</button>
     </center>
     </form>
     

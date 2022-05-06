@@ -42,7 +42,7 @@ function altera(){
          <button className={styles.botao1} onClick={deleta}>
             Deletar
       </button>
-          <button onClick={altera}>Alterar</button> 
+          <button className={styles.botao2} onClick={altera}>Alterar</button> 
         </div>
       </div>
     </>
