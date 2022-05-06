@@ -44,7 +44,7 @@ const handleSubmit = async (e) => {
   return(
     <>
     <div className={styles.loginbox}>
-    <h2>Altera Livro</h2>
+    <h2>Alterar Livro</h2>
     <form onSubmit={handleSubmit}>
     <div className={styles.userbox}>
    <input id="titulo"
