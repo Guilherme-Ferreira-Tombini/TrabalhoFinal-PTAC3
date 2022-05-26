@@ -11,7 +11,7 @@ export default function Card_livro(props) {
         return numero; 
 }
 let data = new Date(props.data_publicacao);
-let dataFormatada = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
+let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
 
 let router = useRouter();    
 async function deleta(){

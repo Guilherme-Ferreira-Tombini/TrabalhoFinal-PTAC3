@@ -12,7 +12,7 @@ function adicionaZero(numero){
         return numero; 
 }
 let data = new Date(props.data_de_nascimento);
-let dataFormatada = (adicionaZero(data.getDate().toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
+let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
   
 const apagarAutor = async (IdAutor) => {
   console.log(IdAutor);
