@@ -19,7 +19,7 @@ export default function Home() {
         <div className={styles.frase}>
           <center>
     <h1>Bem-vindo Usuário</h1>
-    <p>Este é um site em que você pode ver ou cadastrar autores/livros para a nossa livraria online</p>
+    <p>Este é um site em que você pode ver, cadastrar, deletar e atualizar autores/livros para a nossa livraria online</p>
     <h5>Site do Trabalho PTAC3</h5>
           </center>
         </div>
