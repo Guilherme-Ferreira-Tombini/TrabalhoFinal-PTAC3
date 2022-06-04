@@ -59,6 +59,7 @@ const handleSubmit = async (e) => {
     <div className={styles.loginbox}>
     <h2>Livros</h2>
     <form onSubmit={handleSubmit}>
+      <label className={styles.texto}>Autor do livro</label>
       <div className={styles.userbox}>
       <select id="autor_id" value={livros.autor_id} onChange={handleInputChange}>
         {autores.map(autor => {

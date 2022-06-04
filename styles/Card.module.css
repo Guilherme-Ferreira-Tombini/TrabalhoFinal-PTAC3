@@ -76,6 +76,10 @@
   letter-spacing: 4px;
   background: #7c509b;
 }
+.texto{
+  font-size: 12px;
+}
+
 .loginbox button:hover{
   background: #3c3243;
   color: white;
