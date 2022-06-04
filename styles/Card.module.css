@@ -30,6 +30,18 @@
   background: transparent;
   
 }
+.loginbox .userbox select{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 15px;
+  color: white;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  background: transparent;
+  
+}
 .loginbox .userbox label{
   position: absolute;
   top: 0;
@@ -40,6 +52,10 @@
   pointer-events: none;
   transition: .5s;
 }
+.loginbox .userbox option{
+  color: black;
+}
+
 .loginbox .userbox input:focus ~ label,
 .loginbox .userbox input:valid ~ label{
   top: -20px;

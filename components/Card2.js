@@ -5,8 +5,23 @@ import styles from '../styles/Card.module.css'
 import api from '../pages/api/api.js'
 import { useEffect, useState } from 'react'
 
+
 export default function Card2(){
+  const [autores, setAutores]= useState([])
+  useEffect( async ()=>{
+    api.get('/')
+      .then(response =>{
+        setAutores(response.data)
+        
+      })
+      .catch(err => {
+        console.log("Deu ruim ", err)
+      })
+  }, [] )
+  console.log(autores)
+  
 const [livros, setLivros] = useState({
+    autor_id:"",
     titulo: "",
     editora: "",
     data_publicacao: "",
@@ -22,6 +37,7 @@ const handleInputChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
+    autor_id: livros.autor_id,
     titulo: livros.titulo,
     editora: livros.editora, 
     data_publicacao: livros.data_publicacao,
@@ -43,6 +59,15 @@ const handleSubmit = async (e) => {
     <div className={styles.loginbox}>
     <h2>Livros</h2>
     <form onSubmit={handleSubmit}>
+      <div className={styles.userbox}>
+      <select id="autor_id" value={livros.autor_id} onChange={handleInputChange}>
+        {autores.map(autor => {
+      return(
+          <option key={autor.id} value={autor.id}>{autor.nome}</option>)
+        })}
+      </select>
+        </div>
+      
     <div className={styles.userbox}>
    <input id="titulo"
               type="text"

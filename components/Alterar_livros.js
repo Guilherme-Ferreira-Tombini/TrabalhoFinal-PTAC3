@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react'
 export default function Atualiza2(props){
    const data = (e) => e.replace("T00:00:00.000Z", '')
 const [livros, setLivros] = useState({
+    autor_id: props.autor_id,
     titulo: props.titulo,
     editora: props.editora,
     data_publicacao: data(props.data_publicacao),
@@ -24,7 +25,7 @@ const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
     id: props.id,
-    autor_id: props.autor,
+    autor_id: livros.autor_id,
     titulo: livros.titulo,
     editora: livros.editora, 
     data_publicacao: livros.data_publicacao,
@@ -46,6 +47,13 @@ const handleSubmit = async (e) => {
     <div className={styles.loginbox}>
     <h2>Alterar Livro</h2>
     <form onSubmit={handleSubmit}>
+      <div className={styles.userbox}>
+   <input id="autor_id"
+              type="text"
+              value={livros.autor_id}
+              onChange={handleInputChange} />
+    <label>Autor do livro</label>
+    </div>
     <div className={styles.userbox}>
    <input id="titulo"
               type="text"

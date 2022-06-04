@@ -33,6 +33,7 @@ function altera(){
       <div className={styles.card}>
         <div className={styles.texto}>
         <h1>{props.titulo}</h1>
+        <h3>Autor: {props.autor_id}</h3>
         <h4>Editora: {props.editora}</h4>
         <h4>Data de publicação: {dataFormatada}</h4>
         <h4>Preço: {props.preco}</h4>
