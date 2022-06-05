@@ -6,7 +6,20 @@ import api from '../pages/api/api.js'
 import { useEffect, useState } from 'react'
 
 export default function Atualiza2(props){
-   const data = (e) => e.replace("T00:00:00.000Z", '')
+  const [autores, setAutores]= useState([])
+  useEffect( async ()=>{
+    api.get('/')
+      .then(response =>{
+        setAutores(response.data)
+        
+      })
+      .catch(err => {
+        console.log("Deu ruim ", err)
+      })
+  }, [] )
+  console.log(autores)
+  
+const data = (e) => e.replace("T00:00:00.000Z", '')
 const [livros, setLivros] = useState({
     autor_id: props.autor_id,
     titulo: props.titulo,
@@ -47,13 +60,16 @@ const handleSubmit = async (e) => {
     <div className={styles.loginbox}>
     <h2>Alterar Livro</h2>
     <form onSubmit={handleSubmit}>
+      <label className={styles.texto}>Autor do livro</label>
       <div className={styles.userbox}>
-   <input id="autor_id"
-              type="text"
-              value={livros.autor_id}
-              onChange={handleInputChange} />
-    <label>Autor do livro</label>
-    </div>
+      <select id="autor_id" value={livros.autor_id} onChange={handleInputChange}>
+        {autores.map(autor => {
+      return(
+          <option key={autor.id} value={autor.id}>{autor.nome}</option>)
+        })}
+      </select>
+        </div>
+      
     <div className={styles.userbox}>
    <input id="titulo"
               type="text"
