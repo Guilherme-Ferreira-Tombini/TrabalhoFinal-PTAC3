@@ -5,7 +5,7 @@ import styles from '../styles/Card_unico.module.css'
 import api from '../pages/api/api.js'
 import { useEffect, useState } from 'react'
 
-export default function CadaLivro(props) {
+export default function CadaAutor(props) {
   function adicionaZero(numero){
     if (numero <= 9) 
         return "0" + numero;
