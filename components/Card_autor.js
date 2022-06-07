@@ -33,12 +33,12 @@ async function deleta(){
             router.push('/posts/' + props.id)
 
   }
-  
+  const nome = props.nome+" "+props.sobrenome
   return (
     <>
       <div className={styles.card}>
         <div className={styles.texto}>
-        <h1>{props.nome} {props.sobrenome}</h1>
+        <h1><Link href={`/posts/autor/${props.id}`}>{nome}</Link></h1>
         <h4>Data de nascimento: {dataFormatada}</h4>
           </div>
         <div className={styles.botoes}>
