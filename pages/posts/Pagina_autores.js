@@ -20,7 +20,7 @@ export default function Pagina_autores(){
       <Card2/>
     </main>
     <footer className={styles.footer}>
-          Guilherme Ferreira Tombini - INFO 5A
+         Guilherme Tombini, Rafael Albuquerque - INFO 5A
       </footer>
     </div>
   ) 

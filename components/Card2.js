@@ -9,7 +9,7 @@ import { useEffect, useState } from 'react'
 export default function Card2(){
   const [autores, setAutores]= useState([])
   useEffect( async ()=>{
-    api.get('/')
+    api.get('/autors')
       .then(response =>{
         setAutores(response.data)
         
@@ -21,7 +21,7 @@ export default function Card2(){
   console.log(autores)
   
 const [livros, setLivros] = useState({
-    autor_id:"",
+    autorId: 0,
     titulo: "",
     editora: "",
     data_publicacao: "",
@@ -37,14 +37,14 @@ const handleInputChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-    autor_id: livros.autor_id,
+    autorId: livros.autorId,
     titulo: livros.titulo,
     editora: livros.editora, 
     data_publicacao: livros.data_publicacao,
     preco: livros.preco
     }
     console.log(data);
-    const response = await axios.post("https://skeleton-nodejs.guilhermetombin.repl.co/inserir1", data)
+    const response = await axios.post("https://projetofinal-ptas2.guilhermetombin.repl.co/livros/", data)
    if (!response.statusText === "OK") {
       toast.error("Erro ao adicionar post!");
     } else {
@@ -61,7 +61,7 @@ const handleSubmit = async (e) => {
     <form onSubmit={handleSubmit}>
       <label className={styles.texto}>Autor do livro</label>
       <div className={styles.userbox}>
-      <select id="autor_id" value={livros.autor_id} onChange={handleInputChange}>
+      <select id="autorId" value={livros.autorId} onChange={handleInputChange}>
         {autores.map(autor => {
       return(
           <option key={autor.id} value={autor.id}>{autor.nome}</option>)

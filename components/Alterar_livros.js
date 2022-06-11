@@ -8,7 +8,7 @@ import { useEffect, useState } from 'react'
 export default function Atualiza2(props){
   const [autores, setAutores]= useState([])
   useEffect( async ()=>{
-    api.get('/')
+    api.get('/autors')
       .then(response =>{
         setAutores(response.data)
         
@@ -21,7 +21,7 @@ export default function Atualiza2(props){
   
 const data = (e) => e.replace("T00:00:00.000Z", '')
 const [livros, setLivros] = useState({
-    autor_id: props.autor_id,
+    autorId: props.autorId,
     titulo: props.titulo,
     editora: props.editora,
     data_publicacao: data(props.data_publicacao),
@@ -37,15 +37,14 @@ const handleInputChange = (e) => {
 const handleSubmit = async (e) => {
     e.preventDefault();
     const data = {
-    id: props.id,
-    autor_id: livros.autor_id,
+    autorId: livros.autorId,
     titulo: livros.titulo,
     editora: livros.editora, 
     data_publicacao: livros.data_publicacao,
     preco: livros.preco
     }
     console.log(data);
-    const response = await axios.put("https://skeleton-nodejs.guilhermetombin.repl.co/atualizar1", data)
+    const response = await axios.put(`https://projetofinal-ptas2.guilhermetombin.repl.co/livros/${props.id}`, data)
    if (!response.statusText === "OK") {
       toast.error("Erro ao adicionar post!");
     } else {
@@ -62,7 +61,7 @@ const handleSubmit = async (e) => {
     <form onSubmit={handleSubmit}>
       <label className={styles.texto}>Autor do livro</label>
       <div className={styles.userbox}>
-      <select id="autor_id" value={livros.autor_id} onChange={handleInputChange}>
+      <select id="autorId" value={livros.autorId} onChange={handleInputChange}>
         {autores.map(autor => {
       return(
           <option key={autor.id} value={autor.id}>{autor.nome}</option>)

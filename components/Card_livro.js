@@ -17,7 +17,7 @@ let router = useRouter();
 async function deleta(){
   let alerta = confirm("Você deseja deletar esse livro ?");
   if(alerta == true){
-    const response = await axios.delete("https://skeleton-nodejs.guilhermetombin.repl.co/deletar1?id=" + parseInt(props.id))
+    const response = await axios.delete("https://projetofinal-ptas2.guilhermetombin.repl.co/livros/" + parseInt(props.id))
      console.log(response);
     alert("Livro excluido com sucesso")   
         router.push('/')
@@ -33,10 +33,8 @@ function altera(){
       <div className={styles.card}>
         <div className={styles.texto}>
         <h1><Link href={`/posts/livro/${props.id}`}>{props.titulo}</Link></h1>
-        <h3>Autor: {props.autor_id}</h3>
-        <h4>Editora: {props.editora}</h4>
-        <h4>Data de publicação: {dataFormatada}</h4>
-        <h4>Preço: {props.preco}</h4>
+          <h4>Autor: {props.autorId}</h4>
+        <h4>Preço: ${props.preco}</h4>
           </div>
         <div className={styles.botoes} >
           

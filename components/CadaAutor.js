@@ -12,21 +12,21 @@ export default function CadaAutor(props) {
     else
         return numero; 
 }
-  let data = new Date(props.data_de_nascimento);
+  let data = new Date(props.data_nascimento);
 let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
   
   const [autores, setAutores] = useState({
     nome: props.nome,
     sobrenome: props.sobrenome,
-    data_de_nascimento: props.data_de_nascimento
+    data_nascimento: props.data_nascimento
   });
 
   return(
     <>
       <div className={styles.frase}>
         <center>
-        <h1>Autor: {autores.nome} {autores.sobrenome}</h1>
-        <h4>{dataFormatada}</h4>
+        <h1>{autores.nome} {autores.sobrenome}</h1>
+        <h4>Data de nascimento: {dataFormatada}</h4>
           </center>
        </div>
     </>

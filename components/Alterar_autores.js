@@ -12,7 +12,7 @@ export default function Atualiza(props) {
   const [autores, setAutores] = useState({
     nome: props.nome,
     sobrenome: props.sobrenome,
-    data_de_nascimento: data(props.data_de_nascimento)
+    data_nascimento: data(props.data_nascimento)
   });
   let router = useRouter();
   
@@ -23,15 +23,16 @@ const handleInputChange = (e) => {
   
 
   const handleSubmit = async (e) => {
+    
     e.preventDefault();
     const data = {
     id: props.id,
     nome: autores.nome,
     sobrenome: autores.sobrenome, 
-    data_de_nascimento: autores.data_de_nascimento,
+    data_nascimento: autores.data_nascimento,
     }
     console.log(data);
-    const response = await axios.put("https://skeleton-nodejs.guilhermetombin.repl.co/atualizar", data)
+    const response = await axios.put(`htps://projetofinal-ptas2.guilhermetombin.repl.co/autors/${id}`, data)
      if (!response.statusText === "OK") {
       toast.error("Erro ao adicionar post!");
     } else {
@@ -63,9 +64,9 @@ const handleInputChange = (e) => {
           </div>
 
           <div className={styles.userbox}>
-            <input id="data_de_nascimento"
+            <input id="data_nascimento"
               type="date"
-              value={autores.data_de_nascimento}
+              value={autores.data_nascimento}
               onChange={handleInputChange} />
             <label>Data de nascimento</label>
           </div>

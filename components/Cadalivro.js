@@ -17,7 +17,7 @@ let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicio
   
   const [livros, setLivros] = useState({
     id: props.id,
-    autor_id: props.autor_id,
+    autorId: props.autorId,
     titulo: props.titulo,
     editora: props.editora,
     data_publicacao: props.data_publicacao,
@@ -29,9 +29,9 @@ let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicio
       <div className={styles.frase}>
         <center>
         <h1>{livros.titulo}</h1>
-        <h4>{livros.editora}</h4>
-        <h4>{dataFormatada}</h4>
-        <h4>Atualmente o livro custa {livros.preco}</h4>
+        <h4>Editora: {livros.editora}</h4>
+        <h4>Data de publicação: {dataFormatada}</h4>
+        <h4>Atualmente o livro custa ${livros.preco}</h4>
           </center>
        </div>
     </>

@@ -7,18 +7,17 @@ import Atualiza from '/components/Alterar_autores.js'
 import axios from 'axios'
 
 export async function getServerSideProps(context) {
-  const id = context.query.id
-  const response = await axios.get("https://skeleton-nodejs.guilhermetombin.repl.co/autor/" + id)
+  const id = context.params.id
+  const response = await axios.get("https://projetofinal-ptas2.guilhermetombin.repl.co/autors/" + id)
   const autor = response.data
-  const data = autor[0]
  return{
    props: {
-     data
+     autor
    }
  }
 }
 
-export default function Autores({data}){
+export default function Autores({autor}){
   return(
     <div className={styles.container}>
        <Head>
@@ -27,10 +26,10 @@ export default function Autores({data}){
       </Head>
       <Menu/>
       <main className={styles.main}>
-      <Atualiza id={data.id} nome={data.nome} sobrenome={data.sobrenome} data_de_nascimento={data.data_de_nascimento}/>
+      <Atualiza id={autor.id} nome={autor.nome} sobrenome={autor.sobrenome} data_nascimento={autor.data_nascimento}/>
       </main>
       <footer className={styles.footer}>
-          Guilherme Ferreira Tombini - INFO 5A
+         Guilherme Tombini, Rafael Albuquerque - INFO 5A
       </footer>
       
     </div>

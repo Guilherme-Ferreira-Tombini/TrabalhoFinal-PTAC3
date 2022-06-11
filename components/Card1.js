@@ -9,7 +9,7 @@ export default function Card1() {
   const [autores, setAutores] = useState({
     nome: "",
     sobrenome: "",
-    data_de_nascimento: ""
+    data_nascimento: ""
   });
   let router = useRouter();
   
@@ -24,10 +24,10 @@ const handleInputChange = (e) => {
     const data = {
     nome: autores.nome,
     sobrenome: autores.sobrenome, 
-    data_de_nascimento: autores.data_de_nascimento,
+    data_nascimento: autores.data_nascimento,
     }
     console.log(data);
-    const response = await axios.post("https://skeleton-nodejs.guilhermetombin.repl.co/inserir", data)
+    const response = await axios.post("https://projetofinal-ptas2.guilhermetombin.repl.co/autors/", data)
      if (!response.statusText === "OK") {
       toast.error("Erro ao adicionar post!");
     } else {
@@ -59,9 +59,9 @@ const handleInputChange = (e) => {
           </div>
 
           <div className={styles.userbox}>
-            <input id="data_de_nascimento"
+            <input id="data_nascimento"
               type="date"
-              value={autores.data_de_nascimento}
+              value={autores.data_nascimento}
               onChange={handleInputChange} />
             <label>Data de nascimento</label>
           </div>

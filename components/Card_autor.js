@@ -11,7 +11,7 @@ function adicionaZero(numero){
     else
         return numero; 
 }
-let data = new Date(props.data_de_nascimento);
+let data = new Date(props.data_nascimento);
 let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicionaZero(data.getMonth()+1).toString()) + "/" + data.getFullYear());
   
 const apagarAutor = async (IdAutor) => {
@@ -21,7 +21,7 @@ let router = useRouter();
 async function deleta(){
   let alerta = confirm("Você deseja deletar esse autor ?");
   if(alerta == true){
-    const response = await axios.delete("https://skeleton-nodejs.guilhermetombin.repl.co/deletar?id=" + parseInt(props.id))
+    const response = await axios.delete("https://projetofinal-ptas2.guilhermetombin.repl.co/autors/"+ parseInt(props.id))
      console.log(response);
     alert("Autor excluido com sucesso") 
         router.push('/')
