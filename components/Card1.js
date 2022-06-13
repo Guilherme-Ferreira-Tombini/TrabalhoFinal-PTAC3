@@ -29,7 +29,7 @@ const handleInputChange = (e) => {
     console.log(data);
     const response = await axios.post("https://projetofinal-ptas2.guilhermetombin.repl.co/autors/", data)
      if (!response.statusText === "OK") {
-      toast.error("Erro ao adicionar post!");
+      alert("Erro ao adicionar post!");
     } else {
       router.push('/posts/Pagina_autores')
     }

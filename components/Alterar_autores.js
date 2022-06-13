@@ -23,18 +23,16 @@ const handleInputChange = (e) => {
   
 
   const handleSubmit = async (e) => {
-    
     e.preventDefault();
     const data = {
-    id: props.id,
     nome: autores.nome,
     sobrenome: autores.sobrenome, 
     data_nascimento: autores.data_nascimento,
     }
     console.log(data);
-    const response = await axios.put(`htps://projetofinal-ptas2.guilhermetombin.repl.co/autors/${id}`, data)
+    const response = await axios.put(`htps://projetofinal-ptas2.guilhermetombin.repl.co/autors/${props.id}`, data)
      if (!response.statusText === "OK") {
-      toast.error("Erro ao adicionar post!");
+      alert("Erro ao adicionar post!");
     } else {
       router.push('/posts/Pagina_autores')
     }
