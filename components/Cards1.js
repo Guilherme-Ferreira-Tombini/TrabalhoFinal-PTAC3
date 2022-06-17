@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 import styles from '../styles/Cards.module.css'
 import Card from '/components/Card_autor.js'
 
+
 export default function Cards1(){
 const [autores, setAutores]= useState([])
   useEffect( async ()=>{
@@ -17,17 +18,17 @@ const [autores, setAutores]= useState([])
   }, [])
   
   return(
-    <>
+    <div className={styles.tela}>
       {
        autores.map(autor => {
          return(
          <div className={styles.cards} key={autor.id}>
-          <div className={styles.espaco}>
+          <div>
            <Card id={autor.id} nome={autor.nome} sobrenome={autor.sobrenome} data_nascimento={autor.data_nascimento}/>
          </div> 
          </div>
          )
        })
       }
-    </>
+    </div>
   )}

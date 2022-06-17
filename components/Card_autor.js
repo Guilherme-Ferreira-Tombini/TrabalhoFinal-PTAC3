@@ -37,16 +37,16 @@ async function deleta(){
   return (
     <>
       <div className={styles.card}>
-        <div className={styles.texto}>
+        <div>
         <h1><Link href={`/posts/autor/${props.id}`}>{nome}</Link></h1>
         <h4>Data de nascimento: {dataFormatada}</h4>
           </div>
         <div className={styles.botoes}>
           
-          <button className={styles.botao1} onClick={deleta}>
-            Deletar
-      </button>
-<button className={styles.botao2} onClick={altera}>Alterar</button>        
+          <button className={styles.botao1} onClick={deleta}>Deletar</button>
+          
+          <button className={styles.botao2} onClick={altera}>Alterar</button>   
+        
         </div>
       </div>
     </>

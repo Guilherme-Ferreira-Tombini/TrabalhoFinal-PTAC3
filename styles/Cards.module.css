@@ -1,6 +1,12 @@
 .cards{
   padding:20px;
+  width:30%;
 }
-.espaco{
-  padding:10px;
+
+.tela{
+  display: flex;
+  padding:66px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap:wrap;
 }

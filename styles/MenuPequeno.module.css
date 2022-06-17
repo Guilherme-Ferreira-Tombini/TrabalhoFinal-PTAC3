@@ -1,33 +1,47 @@
 .card{
-  padding:20px;
+  padding:15px;
   background-color:#2e0250;
   border: 3px solid white;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 13px;
   display:flex;
-  
+  justify-content: column;
+  align-items: center;
+  flex-wrap:wrap;
 }
 .botao1{
   font-size: 16px;
   border: 1px solid white;
-  padding:7px;
+  padding:6px;
+  width:30%;
   color:white;
   background-color: red;
 }
+
+.botao1:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.botao2:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
 .botao2{
   font-size: 16px;
-  margin:10px;
+  width:30%;
   border: 1px solid white;
   padding:6px;
-   color:white;
+  color:white;
   background-color: blue;
 }
 .botoes{
-  margin-left: 60px;
-  
+  margin-top:10px;
+  margin-bottom:5px;
+  width:100%;
+  display:flex;
+  justify-content: space-around;
 }
 
-.texto{
-  flex:1;
-}
 

@@ -4,6 +4,7 @@ import api from '../pages/api/api.js'
 import {useEffect, useState} from 'react'
 import Card from '/components/Card_livro.js'
 
+
 export default function Cards2(){
   const [livros, setLivros]= useState([])
   useEffect(()=>{
@@ -15,17 +16,18 @@ export default function Cards2(){
         console.log("Deu ruim ", err)
       })
   }, [])
+  
   return(
-    <>
+    <div className={styles.tela}>
       {
         livros.map(livro => {
           return(
           <div className={styles.cards} key={livro.id}>
-     <div className={styles.espaco}>
+     <div>
      <Card id={livro.id} titulo={livro.titulo} autorId={livro.autorId} preco={livro.preco}/>
        </div>
    </div>)
         })
       }
-    </>
+    </div>
   )}

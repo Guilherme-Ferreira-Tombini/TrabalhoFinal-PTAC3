@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '/styles/Home.module.css'
 import Head from 'next/head'
 import Menu from '/components/Menu.js'
-import Card from '/components/Cards2.js'
+import Livro from '/components/Cards2.js'
 import Cadastro from '/components/Cadastro_card.js'
 
 export default function Pagina_livros(){
@@ -16,7 +16,7 @@ export default function Pagina_livros(){
     <Menu/>
     <main className={styles.livro}>
       <Cadastro titulo="livro" link="/posts/Cadastro_livros"/>
-      <Card/>
+      <Livro/>
     </main>
     <footer className={styles.footer}>
           Guilherme Tombini, Rafael Albuquerque - INFO 5A

@@ -16,6 +16,12 @@
   align-items: center;
   font-size:28px; 
 }
-.logo{
+.link{
   margin:10px;
+}
+.link:hover{
+	color: #9c60d7;
+}
+.h1:hover{
+	color: #9c60d7;
 }

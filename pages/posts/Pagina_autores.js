@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '/styles/Home.module.css'
 import Head from 'next/head'
 import Menu from '/components/Menu.js'
-import Card2 from '/components/Cards1.js'
+import Autor from '/components/Cards1.js'
 import Cadastro from '/components/Cadastro_card.js'
 
 
@@ -17,7 +17,7 @@ export default function Pagina_autores(){
     <Menu/>
     <main className={styles.autor}>
       <Cadastro titulo="autor" link="/posts/Cadastro_autores"/>
-      <Card2/>
+      <Autor/>
     </main>
     <footer className={styles.footer}>
          Guilherme Tombini, Rafael Albuquerque - INFO 5A

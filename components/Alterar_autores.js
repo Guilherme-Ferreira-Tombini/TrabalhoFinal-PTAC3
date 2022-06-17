@@ -30,14 +30,14 @@ const handleInputChange = (e) => {
     data_nascimento: autores.data_nascimento,
     }
     console.log(data);
-    const response = await axios.put(`htps://projetofinal-ptas2.guilhermetombin.repl.co/autors/${props.id}`, data)
+    console.log(props.id);
+    const response = await axios.put(`https://projetofinal-ptas2.guilhermetombin.repl.co/autors/${props.id}`, data)
      if (!response.statusText === "OK") {
       alert("Erro ao adicionar post!");
     } else {
       router.push('/posts/Pagina_autores')
     }
     console.log(response)
-
   }
   
   return (
