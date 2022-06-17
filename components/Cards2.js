@@ -19,11 +19,13 @@ export default function Cards2(){
   
   return(
     <div className={styles.tela}>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
       {
         livros.map(livro => {
           return(
           <div className={styles.cards} key={livro.id}>
-     <div>
+     <div class="animate__animated animate__backInLeft">
      <Card id={livro.id} titulo={livro.titulo} autorId={livro.autorId} preco={livro.preco}/>
        </div>
    </div>)

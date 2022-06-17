@@ -14,10 +14,11 @@
   display:flex;
   justify-content: center;
   align-items: center;
-  font-size:28px; 
+  font-size:29px; 
 }
 .link{
   margin:10px;
+  font-size:17px;
 }
 .link:hover{
 	color: #9c60d7;
