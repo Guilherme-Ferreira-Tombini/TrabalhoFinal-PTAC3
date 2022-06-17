@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import styles from '../styles/MenuPequeno.module.css'
 import axios from 'axios'
-import { toast, ToastContainer } from 'react-toastify';
 import { useRouter } from "next/router";
 
 export default function Card_autor(props) {
@@ -38,7 +37,7 @@ async function deleta(){
     <>
       <div className={styles.card}>
         <div>
-        <h1><Link href={`/posts/autor/${props.id}`}>{nome}</Link></h1>
+        <h1><Link className={styles.link} href={`/posts/autor/${props.id}`}><a className={styles.link}>{nome}</a></Link></h1>
         <h4>Data de nascimento: {dataFormatada}</h4>
           </div>
         <div className={styles.botoes}>

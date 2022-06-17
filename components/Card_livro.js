@@ -55,7 +55,7 @@ function altera(){
     <>
       <div className={styles.card}>
         <div>
-        <h1><Link href={`/posts/livro/${props.id}`}>{props.titulo}</Link></h1>
+        <h1><Link href={`/posts/livro/${props.id}`}><a className={styles.link}>{props.titulo}</a></Link></h1>
           <h4>Autor: {props.autorId}</h4>
         <h4>Preço: ${props.preco}</h4>
           </div>
