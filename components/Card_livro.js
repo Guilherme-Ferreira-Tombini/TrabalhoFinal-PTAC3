@@ -57,7 +57,7 @@ function altera(){
         <div>
         <h1><Link href={`/posts/livro/${props.id}`}><a className={styles.link}>{props.titulo}</a></Link></h1>
           <h4>Autor: {props.autorId}</h4>
-        <h4>Preço: ${props.preco}</h4>
+        <h4>Preço: R${props.preco}</h4>
           </div>
         <div className={styles.botoes}>
          <button className={styles.botao1} onClick={deleta}>Deletar</button>

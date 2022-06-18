@@ -27,7 +27,7 @@ export default function Autor_Livro({autor}){
       <Menu/>
       <main className={styles.main}>
         {autor.map(autor => {return(
-          <Autor_livro id={autor.id} titulo={autor.titulo}/>
+          <Autor_livro id={autor.id} titulo={autor.titulo} editora={autor.editora} preco={autor.preco}/>
         )})}
       </main>
       <footer className={styles.footer}>

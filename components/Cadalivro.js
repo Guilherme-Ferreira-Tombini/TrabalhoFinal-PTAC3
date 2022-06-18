@@ -31,7 +31,7 @@ let dataFormatada = (adicionaZero((data.getDate()+1).toString()) + "/" + (adicio
         <h1>{livros.titulo}</h1>
         <h4>Editora: {livros.editora}</h4>
         <h4>Data de publicação: {dataFormatada}</h4>
-        <h4>Atualmente o livro custa ${livros.preco}</h4>
+        <h4>Atualmente o livro custa R${livros.preco}</h4>
           </center>
        </div>
     </>
