@@ -26,7 +26,7 @@ export default function Cards2(){
           return(
           <div className={styles.cards} key={livro.id}>
      <div class="animate__animated animate__backInLeft">
-     <Card id={livro.id} titulo={livro.titulo} autorId={livro.autorId} preco={livro.preco}/>
+     <Card id={livro.id} titulo={livro.titulo} autorId={livro.autorId} preco={livro.preco} editora={livro.editora}/>
        </div>
    </div>)
         })
