@@ -8,6 +8,7 @@
   justify-content: column;
   align-items: center;
   flex-wrap:wrap;
+  box-shadow: 0 15px 25px black;
 }
 .botao1{
   font-size: 16px;
