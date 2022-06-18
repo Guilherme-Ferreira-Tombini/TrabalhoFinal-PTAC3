@@ -19,7 +19,6 @@ export async function getServerSideProps(context) {
 
 
 export default function Livro_autores({autor}){
-  console.log(autor)
   return(
     <div className={styles.container}>
        <Head>
