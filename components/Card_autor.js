@@ -29,9 +29,12 @@ async function deleta(){
   }
 }
   function altera(){
-            router.push('/posts/' + props.id)
-
+     router.push('/posts/' + props.id)
   }
+  function livro(){
+    router.push(`/posts/autor_livro/${props.id}`)
+  }
+  
   const nome = props.nome+" "+props.sobrenome
   return (
     <>
@@ -45,7 +48,8 @@ async function deleta(){
           <button className={styles.botao1} onClick={deleta}>Deletar</button>
           
           <button className={styles.botao2} onClick={altera}>Alterar</button>   
-        
+        <button className={styles.botao3} onClick={livro}>Livros</button>
+          
         </div>
       </div>
     </>
